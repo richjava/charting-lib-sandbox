@@ -1,19 +1,97 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        
-    </body>
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <p>The local ice cream shop keeps track of how much ice cream they sell versus the noon temperature on that day. Here are
+        their figures for the last 12 days:</p>
+    <canvas id="myChart" width="600" height="600"></canvas>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js"></script>
+    <script>
+        var ctx = document.getElementById("myChart").getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'scatter',
+            data: {
+                datasets: [{
+                    label: 'Data',
+                    borderColor: 'rgba(255, 0, 0, 0.6)',
+                    backgroundColor: 'rgba(255, 0, 0, 0.1)',
+                    data: [{
+                        x: 215,
+                        y: 14.2
+                    }, {
+                        x: 325,
+                        y: 16.4
+                    }, {
+                        x: 185,
+                        y: 11.9
+                    }, {
+                        x: 332,
+                        y: 15.2
+                    }, {
+                        x: 406,
+                        y: 18.5
+                    }, {
+                        x: 522,
+                        y: 22.1
+                    }, {
+                        x: 412,
+                        y: 19.4
+                    }, {
+                        x: 614,
+                        y: 25.1
+                    }, {
+                        x: 544,
+                        y: 23.4
+                    }, {
+                        x: 421,
+                        y: 18.1
+                    }, {
+                        x: 445,
+                        y: 22.6
+                    }, {
+                        x: 408,
+                        y: 17.2
+                    },]
+                }],
+            },
+            options: {
+                responsive: false,
+                title: {
+                    text: 'Amount of ice cream bought based on temperature',
+                    display: true
+                },
+                scales: {
+                    xAxes: [{
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Ice cream sales ($)'
+                        },
+                        type: 'linear',
+                        position: 'bottom',
+                        display: true
+                    }],
+                    yAxes: [{
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Temperature ℃'
+                        },
+                        type: 'linear',
+                        position: 'left',
+                        display: true
+                    }]
+                }
+            }
+        });
+    </script>
+</body>
+
 </html>
