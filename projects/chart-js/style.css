@@ -1,0 +1,22 @@
+body {
+    background-color: #dddddd;
+    text-align: center;
+}
+
+.chart-text {
+    font-family: sans-serif;
+    color: #333333;
+    width: 800px;
+    margin: auto;
+    font-size: 20px;
+}
+
+h1 {
+    font-family: sans-serif;
+    color: #333333;
+}
+
+#myChart {
+    margin: auto;
+    padding-top: 50px;
+}
