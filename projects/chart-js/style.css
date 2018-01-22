@@ -1,0 +1,16 @@
+body {
+    background-color: #dddddd;
+    text-align: center;
+}
+
+.title {
+    font-family: sans-serif;
+    color: #333333;
+    width: 800px;
+    margin: auto;
+}
+
+#myChart {
+    margin: auto;
+    padding-top: 50px;
+}
